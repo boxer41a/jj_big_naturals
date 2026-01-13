@@ -727,7 +727,7 @@ feature -- Status report
 			loop
 				i := i - 1
 			end
-			Result := i = 1 and then i_th (1) = one_word
+			Result := i = 1 and then i_th (1) = one_word and not is_negative
 		end
 
 	is_even: BOOLEAN
@@ -1079,7 +1079,8 @@ feature {JJ_BIG_NATURAL} -- Implementation (addition & subtraction)
 		end
 
 	add_imp (a_other: like Current)
-			-- Change Current by adding a_other to Current.
+			-- Change Current by adding `a_other' to Current.
+			-- Handles casses where Current and `a_other' have different signs.
 			-- Implementation for `add' which keeps leading zeros.
 		require
 			other_exists: a_other /= Void
@@ -1217,7 +1218,7 @@ feature {JJ_BIG_NATURAL} -- Implementation (addition & subtraction)
 			-- Add two words and a carry word, giving a sum with a
 			-- carry out, because simply adding the values might result
 			-- in overflow with data lose.  The result is passed out in
-			-- the `tup' in order avoid creating a new TUPLE on every
+			-- the `tup' in order to avoid creating a new TUPLE on every
 			-- call to this feature.
 			-- This decomposition feature is used by `simple_add'.
 		require

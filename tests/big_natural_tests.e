@@ -68,16 +68,16 @@ feature -- Constants
 			-- Display a {JJ_BIG_NUMBER} using `out_as_binary'
 			-- (i.e. <11110011, 00011011, 00000001>)
 
-	Default_test_limit: INTEGER = 30
+	Default_test_limit: INTEGER = 100
 			-- The default number of times to run a test.
 
-	Default_word_limit: INTEGER = 4
+	Default_word_limit: INTEGER = 10
 			-- The default max number of words to create for tests
 
 	Default_digit_limit: INTEGER = 10
 			-- The default number of digits to create for tests
 
-	Default_power_limit: INTEGER = 10
+	Default_power_limit: INTEGER = 5
 			-- The default maximum value allowed for exponentiation tests
 
 feature -- Access
@@ -172,8 +172,8 @@ feature -- Basic operations
 --			run_known_fails
 			run_initialization_tests
 -- Constants cause seg faults.  Has to do with redefining from
--- and reference type to an expanded type.  See newgroup message.
--- Alexander said it is bug in compilr
+-- a reference type to an expanded type.  See newgroup message.
+-- Alexander said it is bug in compiler
 --			run_constants_tests
 			run_access_tests
 			run_status_report_tests
@@ -2273,7 +2273,7 @@ feature {NONE} -- Anchors
 			end
 		end
 
-	tuple_anchor: TUPLE [quot, rem: ANY] --like number_anchor]
+	tuple_anchor: TUPLE [quot, rem: like number_anchor]
 			-- Anchor for types involved in division.
 			-- Not to be called; just used to anchor types.
 			-- Declared as a feature to avoid adding an attribute.

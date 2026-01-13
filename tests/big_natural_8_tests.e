@@ -1,9 +1,9 @@
 note
 	description: "[
-		Test routines specific to {JJ_BIG_NATURAL_8} numbers.
+		Test routines specific to {JJ_BIG_NUMBER_8} numbers.
 
-		Features from {BIG_NATURAL_TESTS}, even though fully defined in
-		the {BIG_NATURAL_TESTS} ancestor class, must be redefined here
+		Features from {BIG_NUMBER_TESTS}, even though fully defined in
+		the {BIG_NUMBER_TESTS} ancestor class, must be redefined here
 		in order to be recognized by the automatic test system.
 	]"
 	author: "Jimmy J. Johnson"
@@ -91,6 +91,8 @@ inherit
 			raise,
 			power,
 			power_modulo,
+				-- Basic operations (implementation--division)
+--			bit_shift_left,
 
 				-- Implementation
 			digit_anchor,
@@ -115,49 +117,49 @@ feature -- Constants
 feature -- Basic operations (initialization tests)
 
 	default_create_test
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	set_with_integer
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	set_with_value
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	set_with_string
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	set_with_array
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	set_random
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	set_random_with_digit_count
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 --	from_string
---			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+--			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 --		local
 --			gt, fn, str, s: STRING_8
 --			n: like number_anchor
@@ -207,7 +209,7 @@ feature -- Basic operations (initialization tests)
 feature -- Basic operations (constants tests)
 
 	bits_per_word
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor {BIG_NATURAL_TESTS}
 		end
@@ -369,19 +371,19 @@ feature -- Basic operations (Access & setters)
 		end
 
 	div_limit
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	hash_code
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	bit_count
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
@@ -389,37 +391,37 @@ feature -- Basic operations (Access & setters)
 feature -- Basic operations (Status report tests)
 
 	is_zero
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	is_one
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	is_base
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 --	is_base_multiple
---			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+--			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 --		do
 --			Precursor
 --		end
 
 	is_negative
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	divisible
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
@@ -427,25 +429,25 @@ feature -- Basic operations (Status report tests)
 feature -- Test Queries
 
 	is_same_sign
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	is_less
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	is_magnitude_less
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	is_magnitude_equal
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
@@ -453,43 +455,43 @@ feature -- Test Queries
 feature -- Test basic operations (simple)
 
 --	wipe_out
---			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+--			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 --		do
 --			Precursor
 --		end
 
 	negate
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	increment
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	decrement
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	identity
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	opposite
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	magnitude
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
@@ -497,25 +499,37 @@ feature -- Test basic operations (simple)
 feature -- Test basic operations (addition & subtraction)
 
 	scalar_sum
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	scalar_difference
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
+
+--	add
+--			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
+--		do
+--			Precursor
+--		end
 
 	plus
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
+--	subtract
+--			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
+--		do
+--			Precursor
+--		end
+
 	minus
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
@@ -523,25 +537,25 @@ feature -- Test basic operations (addition & subtraction)
 feature -- Test basic operations (multiplication)
 
 	scalar_multiply
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	scalar_product
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	multiply
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	product
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
@@ -549,19 +563,19 @@ feature -- Test basic operations (multiplication)
 feature -- Test basic operations (division
 
 	quotient
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	integer_quotient
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	integer_remainder
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
@@ -569,22 +583,31 @@ feature -- Test basic operations (division
 feature -- Test basic operations (exponentiation)
 
 	raise
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	power
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
 
 	power_modulo
-			-- Test the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
 		do
 			Precursor
 		end
+
+feature -- Test implementation (division)
+
+--	bit_shift_left
+--			-- Test the corresponding feature from {JJ_BIG_NUMBER}.
+--		do
+--			Precursor
+--		end
+
 
 
 feature -- Basic operations (additional implementation tests)
@@ -697,7 +720,7 @@ feature -- Basic operations (additional implementation tests)
 		end
 
 	words_addedadded
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		local
 			fn, str: STRING_8
 			n: like testable_number_anchor
@@ -793,7 +816,7 @@ feature -- Basic operations (additional implementation tests)
 
 
 	words_multiplied
-			-- Tests the corresponding feature from {JJ_BIG_NATURAL}.
+			-- Tests the corresponding feature from {JJ_BIG_NUMBER}.
 		local
 			fn, str: STRING_8
 			n: like testable_number_anchor
@@ -949,7 +972,7 @@ feature -- Basic operations (selectively exported)
 
 --	bit_shift_left
 --			-- Test and demonstrate feature `bit_shift_left' from
---			-- {JJ_BIG_NATURAL}.
+--			-- {JJ_BIG_NUMBER}.
 --		local
 --			fn, str, s: STRING_8
 --			n: like testable_number_anchor
@@ -999,7 +1022,7 @@ feature -- Basic operations (selectively exported)
 --		end
 
 	normalize
-			-- Test and demonstrate feature `normalize' from {JJ_BIG_NATURAL}.
+			-- Test and demonstrate feature `normalize' from {JJ_BIG_NUMBER}.
 		local
 			str, s: STRING_8
 			n: like testable_number_anchor
@@ -1039,7 +1062,7 @@ feature -- Basic operations (selectively exported)
 
 	as_full_word
 			-- Test and demonstrate feature `as_full_word' from
-			-- {JJ_BIG_NATURAL}.
+			-- {JJ_BIG_NUMBER}.
 		local
 			fn, str, s: STRING_8
 			n: like testable_number_anchor
@@ -1060,7 +1083,7 @@ feature -- Basic operations (selectively exported)
 
 	as_half_words
 			-- Test and demonstrat feature `as_half_words' from
-			-- {JJ_BIG_NATURAL_8}.
+			-- {JJ_BIG_NUMBER_8}.
 		local
 			fn, str, s: STRING_8
 			n: like testable_number_anchor
@@ -1082,7 +1105,7 @@ feature -- Basic operations (selectively exported)
 
 	divide_two_words_by_one
 			-- Test and demonstrate feature `divide_two_words_by_one' from
-			-- {JJ_BIG_NATURAL}.
+			-- {JJ_BIG_NUMBER}.
 		local
 			a, b, d: like digit_anchor
 			fn, str, s: STRING_8
@@ -1151,7 +1174,7 @@ feature -- Basic operations (selectively exported)
 		end
 
 --	scalar_divide
---			-- Test and demonstrate feature `scalar_divide' from {JJ_BIG_NATURAL}.
+--			-- Test and demonstrate feature `scalar_divide' from {JJ_BIG_NUMBER}.
 --			-- I checked the calculations at
 --			-- "https://defuse.ca/big-number-calculator.htm".
 --		local
@@ -1585,7 +1608,7 @@ feature -- Basic operations (implementation tests)
 			a: ARRAY [like digit_anchor]
 			i: INTEGER
 		do
-			set_verbose
+--			set_verbose
 			fn := ".partition"
 			a := <<9,8,7,6,5,4,3,2,1>>
 			create n.from_array (a)

@@ -1,6 +1,6 @@
 note
 	description: "[
-		A class for testing the features of {JJ_BIG_NATURL_32}.
+		A class for testing the features of {JJ_BIG_NATURAL_32}.
 	]"
 	author: "Jimmy J. Johnson"
 	date: "$Date$"
