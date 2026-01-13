@@ -1,7 +1,7 @@
-# jj\_big_numbers
+# jj\_big_naturals
 An Eiffel library for manipulating arbitrarily large numbers.  It implements addition, subtraction,  multiplication and division.
 
-This library depends on the [JJ\_NATURAL](http://github.com/boxer41a/jj_naturals) classes, which adds a class between NUMERIC and the NATURAL\_xxx classes.  Through generic anchors using JJ_NATURAL, the top level class, [jj\_big\_natural](http://github.com/boxer41a/jj_big_numbers/classes/jj_big_natural.e), allows developement and testing with 8-bit numbers instead of 32- or 64-bit numbers, which are too hard to manually trace.
+This library depends on the [JJ\_NATURAL](http://github.com/boxer41a/jj_naturals) classes, which adds a class between NUMERIC and the NATURAL\_xxx classes.  Through generic anchors using JJ_NATURAL, the top level class, [jj\_big\_natural](../classes/jj_big_natural.e), allows developement and testing with 8-bit numbers instead of 32- or 64-bit numbers, which are too hard to manually trace.
 
 To use the example ecf files, checkout the library to a location identified by the envirnment variable "JJ_GITHUB".
 
